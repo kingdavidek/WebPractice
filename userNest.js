@@ -10,12 +10,19 @@ $(document).ready(function () {
         this.numInstances = (this.numInstances || 0) + 1;
         this.taskContainer = '<li><button name=userTask' + this.numInstances + name + '>' + this.name + '</button></li>';
         //FOR SOME REASON THE counter won't update with each new button created :/
+        
+        //this class will include more public functions: such as when how many times an instance was clicked etc.
     }
     
     $('button').on('click', function () {
         $(this).addClass('clickedButton');
         var theName = prompt('Please enter task name');
-        //So here we actually create an instance AND add it visually to the web page. But now need to link button to instance.
+        if (theName === null || false) {
+            return;
+            //figure out why this doesn't break out of the function completely but posts a button with no text instead
+        }
+
+        //So here we actually create an instance AND add it visually to the web page. But now need to link button to instance (Done)
         //var taskContainer = '<li><button name=userTask' + i + theName + '>' + aTask.name + '</button></li>';
         var aTask = new Task(theName);
         console.log(aTask);
