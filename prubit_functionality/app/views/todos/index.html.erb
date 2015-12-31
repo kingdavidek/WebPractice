@@ -1,0 +1,15 @@
+<h1>Todos#index</h1>
+<p>Find me in app/views/todos/index.html.erb</p>
+<p> The controller has passed me an instance variable! <% @todo_item1 %></p>
+<p> All the todos are here : </p>
+
+<ul>
+    <% @todo_items.each do |taskName| %>
+    <li><%= taskName.todo_item %></li>
+    <!-- This database needs more entries -->
+    <% end %>
+
+</ul>
+
+<a href="/todos/delete">Delete last todo</a>
+

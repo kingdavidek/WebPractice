@@ -40,3 +40,7 @@ $(document).ready(function () {
     
     
 });
+
+
+/* next steps http://stackoverflow.com/questions/1328314/hide-all-but-this-via-not-in-jquery-selector */
+        
