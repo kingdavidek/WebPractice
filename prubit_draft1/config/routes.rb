@@ -3,6 +3,8 @@ Rails.application.routes.draw do
 
   get 'pages/about'
   #this gets a controller/action. action usually gets a page from viewer.
+
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

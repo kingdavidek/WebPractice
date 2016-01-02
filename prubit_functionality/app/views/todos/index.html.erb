@@ -1,15 +1,25 @@
-<h1>Todos#index</h1>
+
+<title>Shared To Do App</title>
+
+<div class="container">
+    <div class="row">
+        <div class="span4">
+
+      <h1>Shared Todo App</h1>
 <p>Find me in app/views/todos/index.html.erb</p>
 <p> The controller has passed me an instance variable! <% @todo_item1 %></p>
-<p> All the todos are here : </p>
+<p> All your todos here : </p>
 
-<ul>
+    <div class="well">
     <% @todo_items.each do |taskName| %>
     <li><%= taskName.todo_item %></li>
     <!-- This database needs more entries -->
     <% end %>
 
-</ul>
-
+            </div> <!-- well -->
+            </div>
+        </div>
 <a href="/todos/delete">Delete last todo</a>
+   <!--could also write this as:  link_to "Delete last todo", delete_path %> -->
 
+</div>

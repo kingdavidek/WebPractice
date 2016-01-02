@@ -7,7 +7,10 @@ class TodosController < ApplicationController
 
   def delete
   	#put delete logic here
-  	t = Todo.last 
-  	t.delete
+  	t = Todo.last  #assign the last item on the todo list a variable t
+  	t.delete     #delete that row.
+  end
+
+  def add
   end
 end
