@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
   get 'todos/index'
 
-   get "/todos/delete"
+  match "todos/add" => "todos#add", :via => post
+  get "/todos/delete"
+
+
    #this is the same as writing  the below \/
    #match "todos/delete" => "todos#delete", :as => :delete
 
