@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  get 'todos/index'
-
-  match "todos/add" => "todos#add", :via => post
+  get "todos/index"
+  
+  match "todos/add" => "todos#add", :via => :post
+  
   get "/todos/delete"
 
 

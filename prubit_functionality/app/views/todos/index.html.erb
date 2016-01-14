@@ -5,29 +5,39 @@
     <div class="row">
         <div class="span4">
 
-      <h1>Shared Todo App</h1>
+      <h1>Your Prubit Page</h1>
 <p>Find me in app/views/todos/index.html.erb</p>
 <p> The controller has passed me an instance variable! <% @todo_item1 %></p>
-<p> All your todos here : </p>
-            <%= form_tag("/todos/add", :method=>"post") do %>
-            <%= text_field_tag(:todo_text) %>
-            <%= submit_tag("Add todo", :class=>"btn") %>
-            <% end %>
+<p>All your tasks here</p>
+<%= form_tag("/todos/add", :method=>"post") do %>
+  <%= text_field_tag(:todo_text) %>
+  <%= submit_tag("Add todo", :class=>"btn") %>
+<% end %>
 <!--this is the same as writing: 
         <form accept-charset="UTF-8" action="/todos/add" method="post">
         <input id="todo_text" name="todo_text" type="text">
         <input name="commit" type="submit" class="btn" value="Add todo">
         </form>  -->
             
+<% if !flash[:error].nil? %>
+ <div class="alert alert-error">
+    <button type="button" class="close" data-dismiss="alert" >×</button>
+    <strong><%= flash[:error] %></strong>
+    </div>
+<% end %>
             
     <div class="well">
     <% @todo_items.each do |taskName| %>
-    <li><%= taskName.todo_item %></li>
+        <li><button class="TodosList"><%= taskName.todo_item %></button></li>
     <!-- This database needs more entries -->
     <% end %>
 
-            </div> <!-- well -->
+            </div> 
             </div>
+        
+        <div class="span8">
+            <p>HERE IS WHERE GRAPHS AND SHIT WILL GO</p>
+        </div>
         </div>
 <a href="/todos/delete">Delete last todo</a>
    <!--could also write this as:  link_to "Delete last todo", delete_path %> -->

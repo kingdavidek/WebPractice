@@ -13,3 +13,89 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+    background-color: #069;
+    color: #f7f7b7;
+    font-family: fantasy;
+}
+
+
+
+.TodosList {
+    font-family: fantasy;
+    background-color: #069;
+    color: #f7f7b7;
+    border-color: antiquewhite;
+    border-width: 2px;
+    margin-bottom: 3px;
+}
+
+.TodosList:hover {
+    color: #c00;
+	background-color: #fff;
+}
+
+.btn {
+    background-color: #069;
+    border-radius: 8px;
+    color: #f7f7b7;
+}
+
+.span4 {
+    padding-left: 50px;
+    width: 30%;
+    float:left;
+}
+
+.span8 {
+    float: inherit;
+    width: 60%;
+    border-bottom-color: aliceblue;
+    float:left;
+}
+
+.well {
+    margin: 15px;
+}
+.btn:hover {
+    color: darkgreen;
+    background-color: #f7f7b7;
+}
+
+a {
+    color: darkgray;
+}
+
+a:hover {
+    color: #c00;
+}
+
+.navbar {
+	width: 100%;
+	float: left;
+	margin: 0 0 3em 0;
+	padding: 0;
+	list-style: none;
+	background-color: #f2f2f2;
+	border-bottom: 1px solid #ccc; 
+	border-top: 1px solid #ccc; ;
+}
+
+.navbar-inner {
+    float: left; 
+}
+
+.navbar .navbar-inner a {
+    display: block;
+	padding: 8px 15px;
+	text-decoration: none;
+	font-weight: bold;
+	color: #069;
+	border-right: 1px solid #ccc; 
+}
+
+.navbar .navbar-inner a:hover{
+    color: #c00;
+	background-color: #fff;
+}
